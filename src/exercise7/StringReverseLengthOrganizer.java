@@ -1,11 +1,11 @@
-package Exercise6;
+package exercise7;
 
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class StringLengthOrganizer {
+public class StringReverseLengthOrganizer {
     public static void main(String[] args) {
         List<Object> mixedList = Arrays.asList("fg43qtfqwrfq3", "wejmoiifrwepmfwe", "317uu803147803248032", "432", "432432");
         mixedList.sort((a, b) -> {
@@ -18,7 +18,7 @@ public class StringLengthOrganizer {
         List<String> result = mixedList.stream()
                 .filter(obj -> obj instanceof String)
                 .map(obj -> (String) obj)
-                .sorted(Comparator.comparingInt(String::length))
+                .sorted(Comparator.comparingInt(String::length).reversed())
                 .collect(Collectors.toList());
 
         System.out.println(result);

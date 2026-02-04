@@ -1,4 +1,4 @@
-package Exercise5;
+package exercise5;
 
 @FunctionalInterface
 public interface PiProvider {

@@ -1,14 +1,16 @@
-package Exercise2;
+package exercise1;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.function.Predicate;
 
-public class ReturnO5PlusLeters {
+public class ReturnO {
     public static void main(String[] args) {
         List<String> carBrands = Arrays.asList("Toyota", "Ford", "Volvo", "Hyundai", "Opel");
+        Predicate<String> containsO = brand -> brand.contains("o");
         List<String> result = carBrands.stream()
-                .filter(brand -> brand.contains("o") && brand.length() > 5)
+                .filter(containsO)
                 .collect(Collectors.toList());
         System.out.println(result);
     }
