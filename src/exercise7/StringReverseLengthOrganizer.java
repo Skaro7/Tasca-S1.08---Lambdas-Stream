@@ -8,12 +8,6 @@ import java.util.stream.Collectors;
 public class StringReverseLengthOrganizer {
     public static void main(String[] args) {
         List<Object> mixedList = Arrays.asList("fg43qtfqwrfq3", "wejmoiifrwepmfwe", "317uu803147803248032", "432", "432432");
-        mixedList.sort((a, b) -> {
-            if (a instanceof String && b instanceof String) {
-                return Integer.compare(((String) a).length(), ((String) b).length());
-            }
-            return 0;
-        });
 
         List<String> result = mixedList.stream()
                 .filter(obj -> obj instanceof String)
